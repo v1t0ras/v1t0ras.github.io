@@ -1,0 +1,25 @@
+.whatsapp-fixo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+  }
+  
+  .whatsapp-fixo img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+@font-face {
+    font-family: 'MontserratRegular';
+    src:"fonts\Montserrat-Regular.ttf" format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Aplicando a fonte a todos os textos */
+body {
+    font-family: 'MontserratRegular', sans-serif;
+}

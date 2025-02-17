@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divina Morada Residencial Sênior</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Definindo a fonte personalizada */
+        @font-face {
+            font-family: 'MontserratRegular';
+            src:url('../fonts/Montserrat-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'ShefianItalic';
+            src:url('../fonts/Shefian Italic.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .ShefianItalic {
+            font-family: 'ShefianItalic', sans-serif;
+        }
+
+        /* Aplicando a fonte a todos os textos */
+        body {
+            font-family: 'MontserratRegular', sans-serif;
+        }
+    </style>
+</head>
+<body class="font-MontserratRegular">
+    <!-- Navegação -->
+    <nav class="bg-[#fefdfb] text-[#233e6d] p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/">
+                <img src="images/logo 10.png" alt="Logo da Empresa" class="h-24">
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#inicio" class="hover:text-[#a3b17c] py-3">Início</a>
+                <a href="#servicos" class="hover:text-[#a3b17c] py-3">Serviços</a>
+                <a href="#sobre" class="hover:text-[#a3b17c] py-3">Sobre Nós</a>
+                <a href="#modalidades" class="hover:text-[#a3b17c] py-3">Modalidades</a>
+                <a href="#contato" class="hover:text-[#a3b17c] py-3">Contato</a>
+                <a href="" 
+                    target="_blank" 
+                    class="bg-[#a3b17c] text-white px-6 py-3 rounded-lg hover:bg-[#606948] transition duration-300 flex items-center justify-center space-x-2">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    <span>Agende uma Visita</span>
+                </a>
+            </div>
+            <button class="md:hidden">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative h-screen flex items-center justify-center">
+        <!-- Background com opacidade -->
+        <div class="absolute inset-0">
+            <img src="images/bg 2.jpeg" alt="Idosos felizes" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+        </div>
+
+        <!-- Conteúdo sobreposto -->
+        <div class="relative z-10 text-center text-white px-4">
+            <!-- Espaço para a logo -->
+            <div class="mb-8">
+                <img src="images/logo 2.png" alt="Logo Divina Morada: Residencial Sênior" class="mx-auto w-72 object-contain">
+            </div>
+
+            <!-- Título e descrição -->
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Cuidado Compassivo para a Melhor Idade
+            </h1>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">
+                Oferecemos um ambiente acolhedor e cuidado especializado para idosos, promovendo qualidade de vida e bem-estar.
+            </p>
+            <a
+            <button href="#contato" class="bg-[#233e6d] text-white px-6 py-3 rounded-lg hover:bg-[#13223c]">
+                Agende uma Visita
+            </button>
+            </a>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-[#233e6d] mb-2">Nossos Serviços</h2>
+            <h4 class="text-xl text-center text-[#233e6d]  mb-12">Clique para saber mais</h4>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Serviço 1 -->
+                <button id="servico1" class="p-6 bg-blue-50 rounded-lg hover:bg-[#e4f0fb] transition duration-300">
+                    <i class="fas fa-user-nurse text-4xl text-[#233e6d] mb-4 servico-icone"></i>
+                    <h3 class="text-xl font-bold mb-2">Assistência 24h</h3>
+                    <p class="text-gray-600 servico-texto">Cuidado profissional especializado disponível 24 horas por dia</p>
+                    <p class="text-gray-600 servico-info hidden mt-4">Mais informações sobre assistência 24h...</p>
+                </button>
+                <!-- Serviço 2 -->
+                <button id="servico2" class="p-6 bg-blue-50 rounded-lg hover:bg-[#e4f0fb] transition duration-300">
+                    <i class="fas fa-heartbeat text-4xl text-[#233e6d] mb-4 servico-icone"></i>
+                    <h3 class="text-xl font-bold mb-2">Saúde Integrada</h3>
+                    <p class="text-gray-600 servico-texto">Acompanhamento médico e terapias especializadas</p>
+                    <p class="text-gray-600 servico-info hidden mt-4 opacity-100 transition-opacity duration-300">Enfermeiro, 
+                        Técnico de enfermagem, 
+                        Cuidadores especializados,
+                        Terapeuta ocupacional,
+                        Fisioterapia, 
+                        Nutricionista, 
+                        Aromoterapia e
+                        Musicoterapia</p>
+                </button>
+                <!-- Serviço 3 -->
+                <button id="servico3" class="p-6 bg-blue-50 rounded-lg hover:bg-[#e4f0fb] transition duration-300">
+                    <i class="fas fa-utensils text-4xl text-[#233e6d] mb-4 servico-icone"></i>
+                    <h3 class="text-xl font-bold mb-2">Nutrição Balanceada</h3>
+                    <p class="text-gray-600 servico-texto">Cardápio elaborado por nutricionistas especializados</p>
+                    <p class="text-gray-600 servico-info hidden mt-4">Mais informações sobre nutrição balanceada...</p>
+                </button>
+                <!-- Serviço 4 -->
+                <button id="servico4" class="p-6 bg-blue-50 rounded-lg hover:bg-[#e4f0fb] transition duration-300">
+                    <i class="fas fa-wheelchair text-4xl text-[#233e6d] mb-4 servico-icone"></i>
+                    <h3 class="text-xl font-bold mb-2">Acessibilidade</h3>
+                    <p class="text-gray-600 servico-texto">Estrutura totalmente adaptada para mobilidade reduzida</p>
+                    <p class="text-gray-600 servico-info hidden mt-4">Mais informações sobre acessibilidade...</p>
+                </button>
+                <!-- Serviço 5 -->
+                <button id="servico5" class="p-6 bg-blue-50 rounded-lg hover:bg-[#e4f0fb] transition duration-300">
+                    <i class="fas fa-calendar-alt text-4xl text-[#233e6d] mb-4 servico-icone"></i>
+                    <h3 class="text-xl font-bold mb-2">Atividades Recreativas</h3>
+                    <p class="text-gray-600 servico-texto">Programação diária de atividades físicas e culturais</p>
+                    <p class="text-gray-600 servico-info hidden mt-4">Mais informações sobre atividades recreativas...</p>
+                </button>
+                <!-- Serviço 6 -->
+                <button id="servico6" class="p-6 bg-blue-50 rounded-lg hover:bg-[#e4f0fb] transition duration-300">
+                    <i class="fas fa-hand-holding-heart text-4xl text-[#233e6d] mb-4 servico-icone"></i>
+                    <h3 class="text-xl font-bold mb-2">Acolhimento Familiar</h3>
+                    <p class="text-gray-600 servico-texto">Ambiente acolhedor e visitas da família sempre bem-vindas</p>
+                    <p class="text-gray-600 servico-info hidden mt-4">Mais informações sobre acolhimento familiar...</p>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Sobre Nós -->
+    <section id="sobre" class="py-16 bg-[#a3b17c]">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+            <div class="md:w-1/2">
+                <img src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg" alt="Equipe" class="rounded-lg shadow-xl">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold text-[#fefdfb] mb-6">Sobre Nós</h2>
+                <p class="text-[#fefdfb] mb-4">
+                    Há mais de 20 anos oferecendo cuidado especializado e um ambiente familiar para idosos. Nossa equipe multidisciplinar 
+                    é composta por profissionais altamente qualificados e comprometidos com o bem-estar dos residentes.
+                </p>
+                <ul class="text-gray-600 list-disc pl-6">
+                    <li class="text-[#fefdfb] mb-2">Instalações adaptadas e seguras</li>
+                    <li class="text-[#fefdfb] mb-2">Atividades recreativas diárias</li>
+                    <li class="text-[#fefdfb] mb-2">Acompanhamento psicológico</li>
+                    <li class="text-[#fefdfb] mb-10">Programas de estimulação cognitiva</li>
+                </ul>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Caixa 1 -->
+                    <div class="bg-[#f1ece6] p-6 rounded-lg shadow-lg text-center">
+                        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" alt="Dona 1" class="w-32 h-32 rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-bold text-[#233e6d] mb-2">Maria Silva</h3>
+                        <p class="text-gray-600">
+                            Maria é cofundadora da residência e especialista em cuidados geriátricos. Com mais de 15 anos de experiência, ela garante um ambiente acolhedor e seguro para todos os residentes.
+                        </p>
+                    </div>
+        
+                    <!-- Caixa 2 -->
+                    <div class="bg-[#f1ece6] p-6 rounded-lg shadow-lg text-center">
+                        <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Dona 2" class="w-32 h-32 rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-bold text-[#233e6d] mb-2">Ana Oliveira</h3>
+                        <p class="text-gray-600">
+                            Ana é responsável pela gestão e planejamento de atividades. Com formação em psicologia, ela desenvolve programas que promovem o bem-estar emocional e cognitivo dos idosos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modalidades -->
+    <section id="modalidades" class="p-16 bg-[#f1ece6]">
+            <h1 class="text-xl font-bold text-[#3c3c3c] mb">Conheça nossas</h2>
+                <h2 class="text-4xl font-bold text-[#3c3c3c] mb-3">Modalidades</h2>
+            <p class="text-[#3c3c3c] mb-9">
+                Oferecemos diversos tipos de hospedagem para melhor condizer com a sua necessidade e de seu ente querido.
+            </p>
+        <div class="container grid md:grid-cols-4 gap-8 mx-auto">
+            <div class="bg-[#dfd6cd] p-6 rounded-lg flex-col items-center shadow-lg text-center flex">
+                <img src="images/home-with-heart-sign.png" class="w-10 modalidade-icon mb-3"></img>
+                <p class="text-gray-600 modalidade-texto">Residencial de longa permanência</p>
+            </div>
+            <div class="bg-[#dfd6cd] p-6 rounded-lg flex-col items-center shadow-lg text-center flex">
+                <img src="images/hourglass.png" class="w-10 modalidade-icon mb-3"></img>
+                <p class="text-gray-600 modalidade-texto">hospedagem temporária</p>
+            </div>
+            <div class="bg-[#dfd6cd] p-6 rounded-lg flex-col items-center shadow-lg text-center flex">
+                <img src="images/sphygmomanometer.png" class="w-10 modalidade-icon mb-3"></img>
+                <p class="text-gray-600 modalidade-texto">Recuperação pós-operatória</p>
+            </div>
+            <div class="bg-[#dfd6cd] p-6 rounded-lg flex-col items-center shadow-lg text-center flex">
+                <img src="images/medical.png" class="w-10 modalidade-icon mb-3"></img>
+                <p class="text-gray-600 modalidade-texto">Acompanhamento geriátrico</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-[#2f5290] mb-8">Envie uma mensagem</h2>
+            <div class="max-w-2xl mx-auto">
+                <form class="space-y-4" action="https://api.staticforms.xyz/submit" method="post">
+                    <div>
+                        <input type="text" name="name" placeholder="Seu nome" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <input type="email" name="email" placeholder="Seu e-mail" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <input type="tel" name="phone" placeholder="Seu telefone" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div>
+                        <textarea rows="4" name="message" placeholder="Sua mensagem" class="w-full p-3 border border-gray-300 rounded-lg" required></textarea>
+                    </div>
+                    <button id="btnEnviar" class="bg-[#233e6d] text-white px-6 py-3 rounded-lg hover:bg-[#2f5290] w-full" type="submit">
+                        Enviar Mensagem
+                    </button>
+                    <p id="mensagemEnviada" class="text-[#233e6d] text-center hidden">Mensagem enviada, entraremos em contato.</p>
+                    <input type="text" name="honeypot" style="display:none">
+                    <input type="hidden" name="accessKey" value="">
+                    <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/index.html">
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-[#233e6d] text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Divina Morada</h4>
+                    <p class="text-sm text-blue-200">
+                        Rua dos Jasmins, 799, bairro Noiva do Mar<br>
+                        Xangri-Lá - RS<br>
+                        Tel: (51) 99930-1313
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-blue-200 hover:text-white">Início</a></li>
+                        <li><a href="#servicos" class="text-blue-200 hover:text-white">Serviços</a></li>
+                        <li><a href="#sobre" class="text-blue-200 hover:text-white">Sobre Nós</a></li>
+                        <li><a href="#modalidades" class="text-blue-200 hover:text-white">Modalidades</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="" class="text-blue-200 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="" class="text-blue-200 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="" class="text-blue-200 hover:text-white"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 mt-8 pt-4 text-center text-blue-200">
+                <p>&copy; 2025 Divina Morada Residencial Sênior. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Script para controlar a caixa -->
+    <script>
+        // Função para alternar o conteúdo do serviço
+    function toggleServico(servico) {
+        const icone = servico.querySelector('.servico-icone');
+        const texto = servico.querySelector('.servico-texto');
+        const info = servico.querySelector('.servico-info');
+
+        // Alterna a visibilidade do ícone e do texto
+        icone.classList.toggle('hidden');
+        texto.classList.toggle('hidden');
+        info.classList.toggle('hidden');
+    }
+
+    function enviarMensagem(text){
+        text.classList.remove('hidden');
+    }
+    btnEnviar.addEventListener('click', ()=> {
+        enviarMensagem(mensagemEnviada);
+    })
+
+    // Adiciona eventos de clique a todos os botões de serviço
+    document.querySelectorAll('#servicos button').forEach(servico => {
+        servico.addEventListener('click', () => {
+            toggleServico(servico);
+        });
+    });
+    </script>
+</body>
+</html>
